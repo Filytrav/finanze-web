@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE = 'finanze-web-1.4.0';
+const CACHE = 'finanze-web-1.4.1';
 const FILES = [
   './',
   './index.html',
