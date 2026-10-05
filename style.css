@@ -594,3 +594,30 @@ td.date{font-size:11px}
     body.webapp .side,.mobile-menu-backdrop{transition:none}
   }
 }
+
+
+/* Navigazione mobile a pannello laterale sinistro */
+.mobile-menu-toggle,.mobile-menu-backdrop{display:none}
+@media(max-width:860px){
+  .top{gap:8px}
+  .top h1{margin-right:auto}
+  .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;font-size:20px;flex:none}
+  .mobile-menu-backdrop{display:block;position:fixed;inset:0;z-index:80;border:0;padding:0;background:rgba(0,0,0,.58);backdrop-filter:blur(2px)}
+  .mobile-menu-backdrop[hidden]{display:none}
+  body.mobile-menu-open{overflow:hidden}
+  body.webapp .side{position:fixed;inset:0 auto 0 0;z-index:90;width:min(86vw,340px);height:100vh;height:100dvh;padding:max(18px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:stretch;gap:16px;overflow-x:hidden;overflow-y:auto;border:0;border-right:1px solid var(--line);border-radius:0 20px 20px 0;background:#15151d;box-shadow:18px 0 55px rgba(0,0,0,.32);transform:translateX(-105%);visibility:hidden;transition:transform .22s ease,visibility .22s}
+  body.webapp.mobile-menu-open .side{transform:translateX(0);visibility:visible}
+  body.webapp .side .brand{display:block;font-size:21px;padding:4px 8px 10px}
+  body.webapp .nav{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+  body.webapp .nav-group{display:block;width:auto;height:auto;margin:11px 0 2px;padding:8px 10px 3px;background:none;font-size:11px}
+  body.webapp .nav button{position:static;display:flex;width:100%;height:auto;min-height:44px;padding:10px 12px;justify-content:flex-start;text-align:left}
+  body.webapp .nav .lbl{display:inline;white-space:normal}
+  body.webapp .nav .count{display:inline;margin-left:auto}
+  body.webapp .nav .alert{position:static;margin-left:auto}
+  body.webapp .side-foot{display:flex;width:100%;margin-top:auto;flex-direction:column;gap:9px}
+  body.webapp .side-foot .btn{display:block;width:100%;height:auto;min-height:44px;padding:9px 13px;font-size:14px;white-space:normal}
+  body.webapp .side-foot .btn::after{content:none}
+  body.webapp .side-foot [data-action=import]{display:none}
+  :root[data-theme=light] body.webapp .side{background:#fff}
+  @media(prefers-reduced-motion:reduce){body.webapp .side,.mobile-menu-backdrop{transition:none}}
+}
