@@ -10,7 +10,19 @@
   menuButton.setAttribute('aria-label', 'Apri il menu');
   menuButton.setAttribute('aria-controls', 'nav');
   menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.innerHTML = '<span aria-hidden="true">☰</span>';
+  menuButton.innerHTML = '<span aria-hidden="true">☰</span  const quickAddButton = document.createElement('button');
+  quickAddButton.className = 'btn primary web-quickadd';
+  quickAddButton.type = 'button';
+  quickAddButton.setAttribute('aria-label', 'Aggiungi un movimento');
+  quickAddButton.textContent = '＋ Aggiungi movimento';
+  document.body.appendChild(quickAddButton);
+  quickAddButton.addEventListener('click', () => {
+    const action = side.querySelector('[data-action="quickadd"]');
+    if (!action) throw new Error('Pulsante per l’inserimento rapido non trovato.');
+    action.click();
+  });
+
+>';
   document.querySelector('.top').appendChild(menuButton);
 
   const menuBackdrop = document.createElement('button');
@@ -108,7 +120,7 @@
 
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./service-worker.js?v=1.4.2').catch((error) => {
+      navigator.serviceWorker.register('./service-worker.js?v=1.4.5').catch((error) => {
         console.error('Registrazione offline non riuscita:', error);
       });
     });
