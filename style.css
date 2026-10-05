@@ -621,3 +621,5 @@ td.date{font-size:11px}
   :root[data-theme=light] body.webapp .side{background:#fff}
   @media(prefers-reduced-motion:reduce){body.webapp .side,.mobile-menu-backdrop{transition:none}}
 }
+
+@media(max-width:860px){.mobile-menu-toggle{order:-1}}
