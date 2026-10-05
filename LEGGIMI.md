@@ -1,6 +1,6 @@
 ﻿# Finanze 1.4 Web
 
-Versione web installabile (PWA) 1.4.5, basata sull'interfaccia Finanze 1.4. Funziona su PC, Android e iPhone/iPad senza App Store e senza abbonamenti. Non richiede un account e non sincronizza i dati online. Su telefono e tablet, la navigazione tra sezioni e nel menu laterale a scomparsa sul lato sinistro e il pulsante mobile **Aggiungi movimento** sempre disponibile.
+Versione web installabile (PWA) 1.4.5, basata sull'interfaccia Finanze 1.4. Funziona su PC, Android e iPhone/iPad senza App Store e senza abbonamenti. Non richiede un account e non sincronizza i dati online. Su telefono e tablet, la navigazione tra sezioni e nel menu laterale a scomparsa richiamabile da sinistra e il pulsante mobile **Aggiungi movimento** sono sempre disponibili.
 
 ## Dati e trasferimento tra dispositivi
 
