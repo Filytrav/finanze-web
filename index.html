@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070209">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Finanze">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>Finanze - gestione personale</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="webapp">
+<div class="app">
+  <aside class="side">
+    <div class="brand">Finanze<small>I dati restano su questo dispositivo</small></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">
+      <button class="btn" data-action="quickadd" aria-label="Aggiungi movimento rapido">＋ Aggiungi rapido</button>
+      <button class="btn primary" data-action="import" aria-label="Importa estratti">Importa file</button>
+    </div>
+  </aside>
+  <main>
+    <header class="top">
+      <h1 id="title"></h1>
+    </header>
+    <section class="period-picker" id="periodPicker" aria-label="Selezione del periodo">
+      <label class="period-year"><span>Anno</span><select id="periodYear" aria-label="Seleziona anno"></select></label>
+      <div class="mstrip" id="mstrip" role="group" aria-label="Seleziona mese"></div>
+    </section>
+    <section id="view"></section>
+  </main>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="dropveil" id="dropveil">Rilascia qui i file da importare</div>
+<div class="tip" id="tip"></div>
+<input type="file" id="restorePick" accept=".json,application/json" hidden>
+<input type="file" id="filePick" multiple accept=".csv,.pdf,application/pdf,text/csv" hidden>
+
+<script src="web-api.js"></script>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+<script src="webapp.js"></script>
+</body>
+</html>
