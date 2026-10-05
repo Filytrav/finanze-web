@@ -108,7 +108,7 @@
 
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./service-worker.js').catch((error) => {
+      navigator.serviceWorker.register('./service-worker.js?v=1.4.2').catch((error) => {
         console.error('Registrazione offline non riuscita:', error);
       });
     });

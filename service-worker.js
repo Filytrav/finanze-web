@@ -1,16 +1,16 @@
 'use strict';
 
-const CACHE = 'finanze-web-1.4.1';
+const CACHE = 'finanze-web-1.4.2';
 const FILES = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './web-api.js',
-  './webapp.js',
-  './logic.js',
-  './app.js',
-  './style.css',
-  './fonts.css',
+  './web-api.js?v=1.4.2',
+  './webapp.js?v=1.4.2',
+  './logic.js?v=1.4.2',
+  './app.js?v=1.4.2',
+  './style.css?v=1.4.2',
+  './fonts.css?v=1.4.2',
   './icon.png',
   './icon-192.png',
   './icon-512.png',

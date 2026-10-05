@@ -93,7 +93,7 @@
     },
     snapshot,
     openFolder: async () => { throw new Error('La cartella locale non è accessibile dal browser.'); },
-    info: async () => ({ version:'1.4.1 Web', dataPath:'Dati locali di questo browser e dispositivo' }),
+    info: async () => ({ version:'1.4.2 Web', dataPath:'Dati locali di questo browser e dispositivo' }),
     setTheme: async () => true,
     ready: () => {},
   };
