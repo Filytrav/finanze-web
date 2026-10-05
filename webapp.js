@@ -10,7 +10,16 @@
   menuButton.setAttribute('aria-label', 'Apri il menu');
   menuButton.setAttribute('aria-controls', 'nav');
   menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.innerHTML = '<span aria-hidden="true">☰</span  const quickAddButton = document.createElement('button');
+  menuButton.innerHTML = '<span aria-hidden="true">☰</span>';
+  document.querySelector('.top').appendChild(menuButton);
+
+  const menuBackdrop = document.createElement('button');
+  menuBackdrop.className = 'mobile-menu-backdrop';
+  menuBackdrop.type = 'button';
+  menuBackdrop.setAttribute('aria-label', 'Chiudi il menu');
+  document.body.appendChild(menuBackdrop);
+
+  const quickAddButton = document.createElement('button');
   quickAddButton.className = 'btn primary web-quickadd';
   quickAddButton.type = 'button';
   quickAddButton.setAttribute('aria-label', 'Aggiungi un movimento');
@@ -21,15 +30,6 @@
     if (!action) throw new Error('Pulsante per l’inserimento rapido non trovato.');
     action.click();
   });
-
->';
-  document.querySelector('.top').appendChild(menuButton);
-
-  const menuBackdrop = document.createElement('button');
-  menuBackdrop.className = 'mobile-menu-backdrop';
-  menuBackdrop.type = 'button';
-  menuBackdrop.setAttribute('aria-label', 'Chiudi il menu');
-  document.body.appendChild(menuBackdrop);
 
   function setMenuOpen(open) {
     document.body.classList.toggle('mobile-menu-open', open);
